@@ -1,0 +1,289 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Times New Roman;
+    background-color: white;
+    color: darkblue;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: fixed;
+    background-color:rgb(11, 11, 40) ;
+    width: 100%;
+    padding: 10px;
+    height: 75px;
+    
+}
+
+nav h1 {
+    margin: 0;
+    color: white;
+    font-size: 3rem ;
+    text-align: left;
+}
+
+.links {
+    display: flex;
+    gap: 25px;
+    font-size: 20px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: #ff4d5a;
+}
+
+.home {
+    min-height: 620px;
+    padding: 80px 8%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: center;
+    background-color: #eaf1ff;
+}
+
+.smtxt {
+    margin: 0 0 10px;
+    color: #e33b48;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.home h1 {
+    margin: 0;
+    color: #16213e;
+    font-size: 70px;
+}
+
+.intro {
+    max-width: 560px;
+    font-size: 30px;
+    line-height: 1.6;
+    color: #46516b;
+}
+
+.button{
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: flex;
+    /* justify-content: center; */
+    padding: 25px 40px;
+    gap: 100px;
+    /* border: 2px solid #16213e; */
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.red {
+    background-color: red;
+    color: white;
+    border: 2px solid black;
+}
+
+.blue {
+    background-color: #3157d5;
+    color: white;
+    border: 2px solid black;
+}
+
+.Box-Image {
+    padding: 35px;
+    background-color: white;
+    border: 3px solid #3157d5;
+    border-radius: 18px;
+}
+
+#me-img{
+    width: 100%;
+    border: 2px solid black;
+    border-radius:20px;
+}
+
+.Box-Image p {
+    color: #59637c;
+    line-height: 1.6;
+}
+
+.Box-Image h3 {
+    margin: 10px 0;
+    font-size: 28px;
+}
+
+.section {
+    padding: 90px 8%;
+}
+
+.section h2 {
+    margin: 0 0 25px;
+    font-size: 50px;
+    color: red;
+}
+
+.Chotatxt {
+    max-width: 700px;
+    font-size: 25px;
+    line-height: 1.7;
+    color: #4e586e;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.skill {
+    padding: 25px;
+    min-height: 180px;
+    border-radius: 16px;
+    color: #16213e;
+}
+
+.skill h3 {
+    margin-top: 0;
+    font-size: 23px;
+}
+
+.red-box {
+    background-color: white;
+    border: 2px solid red;
+}
+
+.blue-box {
+    background-color: white;
+    border: 2px solid rgb(9, 53, 115);
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project {
+    padding: 35px;
+    background-color: white;
+    border: 2px solid grey;
+    border-radius: 20px;
+}
+
+.project h3 {
+    margin: 5px 0 15px;
+    font-size: 30px;
+}
+
+.pronum {
+    margin: 0;
+    color: rgb(202, 27, 27);
+    font-weight: bold;
+}
+
+.contact {
+    background-color: white;
+    border: 2px solid #e8eaf0;
+}
+
+form {
+    max-width: 700px;
+}
+
+label {
+    display: flex;
+    margin: 20px 0 8px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid lightblue;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.submit {
+    margin-top: 20px;
+    width: auto;
+}
+
+footer {
+    padding: 25px;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 750px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+    }
+
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .home {
+        grid-template-columns: 1fr;
+        padding-top: 62px;
+    }
+
+    .home h1 {
+        font-size: 45px;
+    }
+
+    .skills {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .section,
+    .home {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .home h2,
+    .section h2 {
+        font-size: 40px;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+}
